@@ -1,7 +1,8 @@
 <?xml version="1.0" ?>
 <robot name="differential_bot" xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:include filename="$(find mpc_model_description)/urdf/common/common_properties.xacro"/>
-  <xacro:include filename="$(find mpc_model_description)/urdf/diff/differential_bot.gazebo.xacro"/>
+  <xacro:include filename="$(find mpc_ros_description)/urdf/common/common_properties.xacro"/>
+  <xacro:include filename="$(find mpc_ros_description)/urdf/diff/differential_bot.gazebo.xacro"/>
+
 
 <!-- base -->
 
@@ -17,7 +18,7 @@
     <visual>
       <origin xyz="-0 0 0.2465" rpy="0 0 ${-M_PI*0.5}"/>
       <geometry>
-        <mesh filename="package://mpc_model_description/meshes/body.STL"/>
+        <mesh filename="package://mpc_ros_description/meshes/body.STL"/>
       </geometry>
       <material name="light_black"/>
     </visual>
@@ -43,7 +44,7 @@
     <visual>
       <origin xyz="-0 0 0.2465" rpy="0 0 ${-M_PI*0.5}"/>
       <geometry>
-        <mesh filename="package://mpc_model_description/meshes/base_plate.STL" />
+        <mesh filename="package://mpc_ros_description/meshes/base_plate.STL" />
       </geometry>
       <material
         name="">
@@ -83,7 +84,7 @@
      <visual>
       <origin xyz="0 0 0" rpy="${-M_PI*0.5} 0 0"/>
       <geometry>
-        <mesh filename="package://mpc_model_description/meshes/left_wheel.STL"/>
+        <mesh filename="package://mpc_ros_description/meshes/left_wheel.STL"/>
       </geometry>
       <material
         name="">
@@ -119,7 +120,7 @@
     <visual>
       <origin xyz="0 0 -0.025" rpy="${-M_PI*0.5} 0 0"/>
       <geometry>
-        <mesh filename="package://mpc_model_description/meshes/right_wheel.STL"/>
+        <mesh filename="package://mpc_ros_description/meshes/right_wheel.STL"/>
       </geometry>
       <material
         name="">
@@ -238,7 +239,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://mpc_model_description/meshes/lidar.STL" />
+        <mesh filename="package://mpc_ros_description/meshes/lidar.STL" />
       </geometry>
       <material
         name="">

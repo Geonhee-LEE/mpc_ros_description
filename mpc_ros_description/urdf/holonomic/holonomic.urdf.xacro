@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <robot name="holonomic_bot" xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:include filename="$(find mpc_model_description)/urdf/common/common_properties.xacro"/>
-  <xacro:include filename="$(find mpc_model_description)/urdf/holonomic/holonomic.gazebo.xacro"/>
+  <xacro:include filename="$(find mpc_ros_description)/urdf/common/common_properties.xacro"/>
+  <xacro:include filename="$(find mpc_ros_description)/urdf/holonomic/holonomic.gazebo.xacro"/>
 
   <link name="base_footprint"/>
 
@@ -95,7 +95,7 @@
         rpy="0 0 3.141592" />
       <geometry>
         <mesh
-          filename="package://mpc_model_description/meshes/lidar.STL" />
+          filename="package://mpc_ros_description/meshes/lidar.STL" />
       </geometry>
       <material
         name="">
@@ -109,7 +109,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://mpc_model_description/meshes/lidar.STL" />
+          filename="package://mpc_ros_description/meshes/lidar.STL" />
       </geometry>
     </collision>
   </link>

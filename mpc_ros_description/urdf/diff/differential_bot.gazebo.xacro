@@ -73,7 +73,7 @@
   </gazebo>
 
   <gazebo>
-    <plugin name="servingbot_controller" filename="libgazebo_ros_diff_drive.so">
+    <plugin name="differential_controller" filename="libgazebo_ros_diff_drive.so">
       <commandTopic>cmd_vel</commandTopic>
       <odometryTopic>odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>

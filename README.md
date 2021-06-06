@@ -24,6 +24,7 @@
 ## References
 
 - [serving_bot](https://github.com/CzJaewan/servingbot)
+- [differential_drive](http://wiki.ros.org/differential_drive)
 - [steer_drive_controller](http://wiki.ros.org/steer_drive_controller)
 - [steer_drive_ros](http://wiki.ros.org/steer_drive_ros)
 - [hector_gazebo_plugins](http://wiki.ros.org/hector_gazebo_plugins)

@@ -1,0 +1,23 @@
+<package>
+  <name>mpc_ros_description</name>
+  <version>0.1.0</version>
+  <description>
+    <p> mpc_ros model description</p>
+  </description>
+  <author email="gunhee6392@gmail.com">Geonhee</author>
+  <maintainer email="gunhee6392@gmail.com">Geonhee</maintainer>
+  <license>BSD</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roslaunch</build_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>rviz</run_depend>
+  <run_depend>joint_state_publisher</run_depend>
+  <run_depend>gazebo</run_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>urdf</build_depend>
+  <build_depend>xacro</build_depend>
+  <run_depend>urdf</run_depend>
+  <run_depend>xacro</run_depend>
+  <export>
+  </export>
+</package>

@@ -3,7 +3,7 @@
   <xacro:arg name="laser_visual" default="false"/>
   <xacro:arg name="imu_visual"   default="false"/>
   <xacro:arg name="imu_visual"    default="false"/>
-  <xacro:arg name="lidar_visual"    default="true"/>
+  <xacro:arg name="lidar_visual"    default="false"/>
 
   <gazebo reference="base_link">
     <material>Gazebo/DarkGrey</material>

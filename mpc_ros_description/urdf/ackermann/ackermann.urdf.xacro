@@ -21,7 +21,7 @@
   <xacro:include filename="$(find steer_bot_description)/urdf/wheel.xacro"/>
 
   <xacro:property name="M_PI" value="3.1415926535897931" />
-  <xacro:arg name="lidar_visual"    default="true"/>
+  <xacro:arg name="lidar_visual"    default="false"/>
 
   <!-- Gazebo plugins -->
   <gazebo>
@@ -172,7 +172,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://mpc_model_description/meshes/lidar.STL" />
+        <mesh filename="package://mpc_ros_description/meshes/lidar.STL" />
       </geometry>
       <material
         name="">

@@ -19,6 +19,7 @@
 <robot name="bicycle_bot" xmlns:xacro="http://wiki.ros.org/xacro">
   <!-- Include xacro for inertials, materials and wheels -->
   <xacro:include filename="$(find steer_bot_description)/urdf/wheel.xacro"/>
+  <xacro:arg name="lidar_visual"    default="false"/>
 
 
   <!-- Gazebo plugins -->
@@ -114,6 +115,57 @@
     <origin xyz="${-base_length/2+axle_offset} 0 0" rpy="${-90 * deg_to_rad} 0 0"/>
   </xacro:rear_wheel>
 
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+    <origin xyz="0 0 0.2" rpy="0 0 0"/>
+  </joint>
+
+  <link name="lidar_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://mpc_ros_description/meshes/lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+  </link>
+  <gazebo reference="lidar_link">
+    <material>Gazebo/FlatBlack</material>
+    <sensor type="ray" name="lds_lfcd_sensor">
+      <pose>0 0 0 0 0 1.57079631</pose>
+      <visualize>$(arg lidar_visual)</visualize>
+      <update_rate>1500</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>270</samples>
+            <resolution>1</resolution>
+            <min_angle>-2.1</min_angle>
+            <max_angle>2.1</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.05</min>
+          <max>10.0</max>
+          <resolution>0.009</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_lds_lfcd_controller" filename="libgazebo_ros_laser.so">
+        <topicName>/scan</topicName>
+        <frameName>lidar_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
   <!-- Colour -->
   <gazebo reference="base_link">
     <material>Gazebo/Green</material>

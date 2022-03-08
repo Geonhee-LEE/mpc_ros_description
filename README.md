@@ -7,7 +7,7 @@
 ## Requirements
 ``` sudo apt-get install ros-melodic-hector-gazebo-plugins ros-melodic-ackermann-steering-controller ros-melodic-rqt-robot-steering```
 
-## Laucnch the Models 
+## Launch the Models 
 
 ### Differential Drive model
 
